@@ -1,0 +1,5 @@
+#spring:
+#  sql:
+#    init:
+#      schema-locations: ./data/schema-h2.sql
+#

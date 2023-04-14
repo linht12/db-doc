@@ -1,0 +1,28 @@
+2023-04-13 11:34:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SYS_USER" not found (this database is empty); SQL statement:
+select * from sys_user [42104-214]
+2023-04-13 11:34:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SYS_USER" already exists; SQL statement:
+CREATE TABLE sys_user
+(
+    id BIGINT NOT NULL COMMENT '主键ID',
+    username VARCHAR(30) NULL DEFAULT NULL COMMENT '用户名',
+    type VARCHAR(10) NULL DEFAULT 'mysql' COMMENT '数据库类型',
+    password VARCHAR(200) NULL DEFAULT NULL COMMENT '密码',
+    url VARCHAR(150) NULL DEFAULT NULL COMMENT '数据库url',
+    PRIMARY KEY (id)
+) [42101-214]
+2023-04-13 11:55:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DB_ENTITY" not found; SQL statement:
+INSERT INTO db_entity  ( id,
+username,
+password,
+url,
+type )  VALUES  ( ?,
+?,
+?,
+?,
+? ) [42102-214]
+2023-04-13 14:10:16 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * [*]fro tb_db"; SQL statement:
+select * fro tb_db [42000-214]
