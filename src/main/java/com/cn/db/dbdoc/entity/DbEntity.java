@@ -4,6 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.serializer.ToStringSerializer;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
@@ -14,6 +15,8 @@ import lombok.Data;
 @TableName("tb_db")
 public class DbEntity {
     @TableField
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     @JSONField(serializeUsing = ToStringSerializer.class)
     private Long id;
     @NotBlank(message="数据库用户名不能为空")
