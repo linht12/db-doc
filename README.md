@@ -1,30 +1,29 @@
-# dbDoc
+# 数据库文档生成工具
 
-#### 介绍
-通过读取数据库的表字段，生成excel和word的数据字典
+通过读取数据库的表字段，生成excel和word等数据文档
 
-#### 软件架构
-软件架构说明
+使用方法
+----
+    1.项目拉取下来，直接运行项目
+    2.登录http://lcoalhost:8080/h2，其中登录账号密码默认是root/root,连接信息是：jdbc:h2:./data/h2
+    3.把./data目录下的schema-h2.sql放在控制台执行，创建表
+    4.登录swagger：http://127.0.0.1:8080/swagger-ui/index.html，进行添加数据库信息，然后再导出数据库文档
+    5.通过db-controller里的/db/add接口增加数据库信息后得到id。然后在/export/word或/export/excel传入id导出数据库文档
+
+使用的框架
+----
+    1.spring boot 3.0.5
+    2.h2数据库
+    3.springdoc
+    4. jdk17
+    5.freemaker
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+支持数据库
+----
+1.  mysql
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
 
 #### 特技
